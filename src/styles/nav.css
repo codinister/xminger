@@ -1,0 +1,41 @@
+nav {
+  .container {
+    padding-block: 2.4rem;
+    z-index: 9999;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+
+    .active {
+      background-color: var(--danger);
+      padding-inline: 1.6rem;
+      padding-block: 1.2rem;
+      border-radius: 1.8rem;
+    }
+
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      gap: 1.6rem;
+      li {
+        width: max-content;
+        a {
+          color: white;
+          text-shadow: 0 0 0.4rem black;
+          animation: text-zoom 1s 8s linear forwards;
+          opacity: 0;
+          padding-inline: 1.6rem;
+          &:hover {
+            background-color: var(--danger);
+
+            padding-block: 1.2rem;
+            border-radius: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
