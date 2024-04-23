@@ -1,7 +1,7 @@
 @import "./styles/reset";
+@import "./styles/utils";
 @import "./styles/nav";
 @import "./styles/footer";
-@import "./styles/utils";
 @import "./styles/hero";
 @import "./styles/whowearesection";
 @import "./styles/whatwedosection";
