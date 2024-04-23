@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import { Routes, Route,BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import Whoweare from './components/Whoweare';
 import Whereweare from './components/Whereweare';
@@ -14,58 +14,56 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Nav />
-    <Routes>
-  
-      <Route element={<Home />} path="/" />
+      <Nav />
+      <Routes>
+        <Route element={<Home />} path="/" />
 
-      <Route
-        element={
-          <Suspense>
-            <Contact />
-          </Suspense>
-        }
-        path="/contact"
-      />
+        <Route
+          element={
+            <Suspense>
+              <Contact />
+            </Suspense>
+          }
+          path="/contact"
+        />
 
-      <Route
-        element={
-          <Suspense>
-            <Ourproducts />
-          </Suspense>
-        }
-        path="/ourproducts"
-      />
+        <Route
+          element={
+            <Suspense>
+              <Ourproducts />
+            </Suspense>
+          }
+          path="/ourproducts"
+        />
 
-      <Route
-        element={
-          <Suspense>
-            <Whatwedo />
-          </Suspense>
-        }
-        path="/whatwedo"
-      />
+        <Route
+          element={
+            <Suspense>
+              <Whatwedo />
+            </Suspense>
+          }
+          path="/whatwedo"
+        />
 
-      <Route
-        element={
-          <Suspense>
-            <Whereweare />
-          </Suspense>
-        }
-        path="/whereweare"
-      />
+        <Route
+          element={
+            <Suspense>
+              <Whereweare />
+            </Suspense>
+          }
+          path="/whereweare"
+        />
 
-      <Route
-        element={
-          <Suspense>
-            <Whoweare />
-          </Suspense>
-        }
-        path="/whoweare"
-      />
-
-    </Routes>
-    <Footer />
+        <Route
+          element={
+            <Suspense>
+              <Whoweare />
+            </Suspense>
+          }
+          path="/whoweare"
+        />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

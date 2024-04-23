@@ -100,7 +100,7 @@
     animation: slider 2s 4s linear forwards;
     overflow: hidden;
     position: absolute;
-inset: 0;
+    inset: 0;
     height: 100vh;
     z-index: 1;
     scale: 0;
@@ -173,7 +173,7 @@ START BOX 1
 @keyframes bx1-1 {
   100% {
     opacity: 1;
-    transform: translateX(35rem) translateY(42rem);
+    transform: translateX(28rem) translateY(42rem);
   }
 }
 @keyframes bx1-2 {
@@ -203,7 +203,7 @@ START BOX 1
 @keyframes bx1-5 {
   100% {
     opacity: 1;
-    transform: translateX(35rem) translateY(42rem);
+    transform: translateX(28rem) translateY(42rem);
   }
 }
 
@@ -217,7 +217,7 @@ START BOX 2
 @keyframes bx2-1 {
   100% {
     opacity: 1;
-    transform: translateX(45rem) translateY(42rem);
+    transform: translateX(40rem) translateY(42rem);
   }
 }
 @keyframes bx2-2 {
@@ -244,7 +244,7 @@ START BOX 2
 @keyframes bx2-5 {
   100% {
     opacity: 1;
-    transform: translateX(45rem) translateY(42rem);
+    transform: translateX(40rem) translateY(42rem);
   }
 }
 /*==========================
@@ -257,7 +257,7 @@ START BOX 3
 @keyframes bx3-1 {
   100% {
     opacity: 1;
-    transform: translateX(55rem) translateY(42rem);
+    transform: translateX(52rem) translateY(42rem);
   }
 }
 
@@ -288,7 +288,7 @@ START BOX 3
 @keyframes bx3-5 {
   100% {
     opacity: 1;
-    transform: translateX(55rem) translateY(42rem);
+    transform: translateX(52rem) translateY(42rem);
   }
 }
 /*==========================
@@ -301,7 +301,7 @@ START BOX 4
 @keyframes bx4-1 {
   100% {
     opacity: 1;
-    transform: translateX(65rem) translateY(42rem);
+    transform: translateX(64rem) translateY(42rem);
   }
 }
 @keyframes bx4-2 {
@@ -330,7 +330,7 @@ START BOX 4
 @keyframes bx4-5 {
   100% {
     opacity: 1;
-    transform: translateX(65rem) translateY(42rem);
+    transform: translateX(64rem) translateY(42rem);
   }
 }
 /*==========================
@@ -343,7 +343,7 @@ START BOX 5
 @keyframes bx5-1 {
   100% {
     opacity: 1;
-    transform: translateX(75rem) translateY(42rem);
+    transform: translateX(76rem) translateY(42rem);
   }
 }
 
@@ -373,7 +373,7 @@ START BOX 5
 @keyframes bx5-5 {
   100% {
     opacity: 1;
-    transform: translateX(75rem) translateY(42rem);
+    transform: translateX(76rem) translateY(42rem);
   }
 }
 
@@ -387,7 +387,7 @@ START BOX 6
 @keyframes bx6-1 {
   100% {
     opacity: 1;
-    transform: translateX(85rem) translateY(42rem);
+    transform: translateX(88rem) translateY(42rem);
   }
 }
 
@@ -417,7 +417,7 @@ START BOX 6
 @keyframes bx6-5 {
   100% {
     opacity: 1;
-    transform: translateX(85rem) translateY(42rem);
+    transform: translateX(88rem) translateY(42rem);
   }
 }
 

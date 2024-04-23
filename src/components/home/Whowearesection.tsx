@@ -1,4 +1,5 @@
 import { whoweare } from '../../data/data';
+import Readmore from '../Readmore';
 
 const Whowearesection = () => {
   const who = whoweare;
@@ -8,6 +9,7 @@ const Whowearesection = () => {
         <div>
           <h2>{who[0].title}</h2>
           <div>{who[0]?.excerpt}</div>
+          <Readmore>Read more</Readmore>
         </div>
         <div>
           <div

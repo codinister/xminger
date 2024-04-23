@@ -1,3 +1,5 @@
+import Blogsection from "./home/Blogsection"
+import Clientssection from "./home/Clientssection"
 import Hero from "./home/Hero"
 import Whatwedosection from "./home/Whatwedosection"
 import Whowearesection from "./home/Whowearesection"
@@ -8,6 +10,8 @@ const Home = () => {
     <Hero />
     <Whowearesection />
     <Whatwedosection />
+    <Clientssection />
+    <Blogsection />
     </>
   )
 }
