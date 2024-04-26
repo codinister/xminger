@@ -1,3 +1,8 @@
+
+@media (min-width: 35em) {
+
 .container{
     padding-inline: 7rem;
+}
+
 }

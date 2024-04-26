@@ -34,9 +34,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="text-content">
-   
-        </div>
+        <div className="text-content"></div>
       </div>
 
       <div className="thumbs">{ourproducts}</div>
@@ -51,9 +49,6 @@ const Hero = () => {
       >
         <div className="intro-box">
           <div className="circle"></div>
-          
-     
-
         </div>
       </div>
     </div>
