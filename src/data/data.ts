@@ -76,33 +76,33 @@ export const clients = [
 export const blog = [
   {
     id: '1',
-    title: 'We put our clients first',
+    title: 'REVOLUTIONIZING THE ADVERTISING LANDSCAPE IN GHANA WITH WEST AFRICA’S SECOND LARGEST BILLBOARD',
     excerpt:
-      'We value all our clients and hold them in high esteem. Xminger value all our clients and hold them in high esteem. Xminger',
+      'Xminger Advertising is a leading force in the advertising industry in Ghana, making waves with it’s groundbreaking campaigns and innovative approaches. In a remarkable feat, the company has recently erected west Africa’s second largest billboard measuring 9m x 40m in the commercial area of Adum cocoa board, located in the heart of Kumasi. In an ambitious move to solidify it’s',
     img: '/blog/img1.jpg',
     body: '',
   },
   {
     id: '2',
-    title: 'We put our clients first',
+    title: 'XMINGER BILLBOARD: A HERORIC GUARDIAN AT ANLOGA JUNCTION',
     excerpt:
-      'We value all our clients and hold them in high esteem. Xminger',
+      'Situated in the heart of Anloga Junction, one of Xminger’s billboards which is strategically positioned to capture the attention of a large number of',
     img: '/blog/img2.jpg',
     body: '',
   },
   {
     id: '3',
-    title: 'We put our clients first',
+    title: 'KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY STUDENTS EXPLORE XMINGER ADVERTISING\'S OPERATIONS',
     excerpt:
-      'We value all our clients and hold them in high esteem. Xminger',
+      'In an effort to provide students with hands-on industry experience, a group of students from the department of Language and Communication Sciences at the Kwame',
     img: '/blog/img3.jpg',
     body: '',
   },
   {
     id: '4',
-    title: 'We put our clients first',
+    title: '25 YEARS OF REIGN: CELEBRATING THE REMARKABLE LEGACY OF ASANTEHENE OTUMFUOR OSEI TUTU II',
     excerpt:
-      'We value all our clients and hold them in high esteem. Xminger',
+      'We celebrate Asantehene, Otumfour Osei Tutu II. ‘Otumfour wo nkwa so’. It’s been 25 years since His Royal Majesty Otumfour Osei Tutu II was enthroned as the King',
     img: '/blog/img4.jpg',
     body: '',
   },

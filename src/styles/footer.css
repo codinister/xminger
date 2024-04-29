@@ -90,7 +90,7 @@
         & > div {
           display: flex;
           gap: 3.2rem;
-          align-items: center;
+
           & > div {
             flex: 10rem 1 1;
             .cont-box {
@@ -98,14 +98,18 @@
               gap: 1.6rem;
               align-items: center;
               margin-bottom: 1.6rem;
-              .fa {
-                display: block;
-                width: 4rem;
-                height: 4rem;
-                border-radius: 50%;
-                border: solid 0.1rem #999;
-                display: grid;
-                place-items: center;
+
+              a {
+                color: #999;
+                .fa {
+                  display: block;
+                  width: 4rem;
+                  height: 4rem;
+                  border-radius: 50%;
+                  border: solid 0.1rem #999;
+                  display: grid;
+                  place-items: center;
+                }
               }
             }
           }
@@ -114,18 +118,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 35em) {
   footer {
@@ -146,15 +138,8 @@
         flex: 10rem 1 1;
       }
 
-
-
-
-
-
-
       & > div:nth-of-type(1) {
-        
-     display: none;
+        display: none;
       }
 
       & > div:nth-of-type(2) {
@@ -167,7 +152,6 @@
         }
 
         & > div {
-     
           & > div {
             flex: 10rem 1 1;
             .cont-box {
@@ -191,4 +175,3 @@
     }
   }
 }
-

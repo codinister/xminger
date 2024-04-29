@@ -16,8 +16,8 @@ const Blogsection = () => {
           }}
         ></div>
         <div>
-          <h6>{v.title}</h6>
-          <div>{v.excerpt}</div>
+          <h6 title={v.title}>{v.title.slice(0, 10)}...</h6>
+          <div>{v.excerpt.slice(0,60)}...</div>
           <Readmore>Read more</Readmore>
         </div>
       </div>
@@ -36,8 +36,10 @@ const Blogsection = () => {
             }}
           ></div>
           <div>
-            <h6>{getFirst[0]?.title}</h6>
-            <div>{getFirst[0]?.excerpt}</div>
+            <h6 title={getFirst[0]?.title}>
+              {getFirst[0]?.title.slice(0, 60)}...
+            </h6>
+            <div>{getFirst[0]?.excerpt.slice(0, 120)}...</div>
 
             <Readmore>Read more</Readmore>
           </div>

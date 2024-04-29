@@ -7,21 +7,21 @@ const Whatwedosection = () => {
       <div>
         <div>
           <div>
-            <i className="fa fa-user"></i>
+            <i className="fa fa-th-large"></i>
             <h6>Billboard space</h6>
             <h6>rental</h6>
           </div>
         </div>
         <div>
           <div>
-            <i className="fa fa-user"></i>
+            <i className="fa fa-picture-o"></i>
             <h6>Large format</h6>
             <h6>printing</h6>
           </div>
         </div>
         <div>
           <div>
-            <i className="fa fa-user"></i>
+            <i className="fa fa-industry"></i>
 
             <h6>Advertising</h6>
             <h6>Consultancy</h6>
