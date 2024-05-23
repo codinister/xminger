@@ -8,7 +8,7 @@ type NavLinksType = {
 } & React.ComponentProps<'a'>;
 const NavLinks = ({ url, name, ...rest }: NavLinksType) => {
   return (
-    <NavLink to="/" {...rest}>
+    <NavLink to={url} {...rest}>
       {name}
     </NavLink>
   );
@@ -32,7 +32,7 @@ const Nav = () => {
               </li>
               <li>
                 <NavLinks
-                  url="/"
+                  url="/whoweare"
                   name="Who we are"
                   onClick={() => setShow(false)}
                 />

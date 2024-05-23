@@ -1,7 +1,15 @@
+import Pageheader from "./Pageheader"
 
 const Whoweare = () => {
   return (
-    <div>Whoweare</div>
+    <>
+
+    <Pageheader />
+    
+    
+    
+    
+    </>
   )
 }
 
