@@ -38,7 +38,7 @@ export const whoweare = [
     excerpt:
       'Xminger is a professional billboard advertising company, providing visible outdoor advertising locations/spaces that are price competitive with a reputable and inovative advertising style that markets the products and/or services of clients to ensure satisfaction. Our billboard sites are located across all sixteen(16) regions of Ghana on major high ways, market places and other strategic places prone to vehicular as well as human trafic. ',
     img: '/hero/img3.jpg',
-    body: '',
+    body: 'We are a professional billboard advertising company, providing visible outdoor advertising locations/spaces that are price competitive with a reputable and innovative advertising style that markets the products and/or services of clients to ensure satisfaction. Our billboard sites are located across all sixteen(16) regions of Ghana on major highways, marketplaces, and other strategic places prone to vehicular as well as human traffic.',
   },
 ];
 

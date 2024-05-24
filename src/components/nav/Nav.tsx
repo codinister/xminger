@@ -39,28 +39,28 @@ const Nav = () => {
               </li>
               <li>
                 <NavLinks
-                  url="/"
+                  url="/ourproducts"
                   name="Our products"
                   onClick={() => setShow(false)}
                 />
               </li>
               <li>
                 <NavLinks
-                  url="/"
+                  url="/whereweare"
                   name="Where we are"
                   onClick={() => setShow(false)}
                 />
               </li>
               <li>
                 <NavLinks
-                  url="/"
+                  url="/whatwedo"
                   name="What we do"
                   onClick={() => setShow(false)}
                 />
               </li>
               <li>
                 <NavLinks
-                  url="/"
+                  url="/contact"
                   name="Contact"
                   onClick={() => setShow(false)}
                 />

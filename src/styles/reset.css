@@ -3,13 +3,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   font-size: 62.5%;
-  box-sizing: border-box;
-
-  --danger: #ec1a33;
+  --danger: #ff3d00;
   --warning: #fea16d;
   --white: #fff;
   --black: #141414;
@@ -62,7 +61,6 @@ body {
   h4,
   h5,
   h6 {
-
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
