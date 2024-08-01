@@ -97,7 +97,7 @@ const Nav = () => {
               ></div>
               <div>
                 <h4>Our products</h4>
-                <img src={products[0]?.img} alt="" />
+                <Image src={products[0]?.img} alt="" />
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Nav = () => {
       ></div>
 
       <div className="hamburger">
-        <img
+        <Image
           src="/hamburger.jpg"
           onClick={() => setShow(true)}
           alt="Hamburger"
