@@ -1,0 +1,149 @@
+.contact {
+  padding-block: 4.8rem;
+  & > div {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    & > div {
+      flex: 10rem 1 1;
+    }
+    & > div:nth-of-type(1) {
+      & > div:nth-of-type(1) {
+        padding: 2.4rem;
+      }
+      & > div:nth-of-type(2) {
+  
+      }
+    }
+    & > div:nth-of-type(2) {
+      background-color: #f6eee1;
+      height: 47rem;
+      padding: 2.4rem;
+    }
+  }
+}
+
+.contactform {
+  width: 70%;
+
+  margin-inline: auto;
+
+  button {
+    width: 100%;
+  }
+  h4 {
+    margin-bottom: 2.4rem;
+    text-align: center;
+    color: var(--danger);
+  }
+  .input-control {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: solid 0.1rem #444;
+      outline: none;
+    }
+
+    input:focus + label {
+      position: absolute;
+      top: -2rem;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    input:not(:placeholder-shown) + label {
+      position: absolute;
+      top: -2rem;
+      font-size: 1rem;
+    }
+
+    label {
+      position: absolute;
+      top: 0.4rem;
+      left: 0.8rem;
+    }
+  }
+
+  textarea {
+    border: solid 0.1rem #444;
+    width: 100%;
+    padding: 0.8rem;
+
+    outline: none;
+  }
+
+  .errors {
+    color: red;
+    display: block;
+    margin-bottom: 1.6rem;
+  }
+
+  .btn-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.successbox {
+  width: 40rem;
+  height: 15rem;
+  box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.2);
+  margin-inline: auto;
+  & > div:nth-of-type(1) {
+    text-align: right;
+    padding: 1.6rem;
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: green;
+    font-size: 2.4rem;
+  }
+}
+
+.contactdetails {
+  display: flex;
+  gap: 4.8rem;
+  a {
+    color: #999;
+    .fa {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: solid 0.1rem #999;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .cont-box {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    .fa {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: solid 0.1rem #999;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
