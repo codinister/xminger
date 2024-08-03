@@ -1,6 +1,4 @@
-'use client'
-
-
+'use client';
 
 import { useState } from 'react';
 import { products } from '@/data/data';
@@ -28,7 +26,13 @@ const Nav = () => {
       <div className={`panel-1 container ${show ? 'show' : 'hide'}`}>
         <div>
           <div>
-            <Image src="/logo.jpeg" width="100" height="50" alt="" className="logo" />
+            <Image
+              src="/logo.jpeg"
+              width="100"
+              height="50"
+              alt=""
+              className="logo"
+            />
           </div>
 
           <div>
@@ -97,7 +101,7 @@ const Nav = () => {
               ></div>
               <div>
                 <h4>Our products</h4>
-                <Image src={products[0]?.img} alt="" />
+                <Image src={products[0]?.img} alt="" width="30" height="30" />
               </div>
             </div>
           </div>
@@ -114,6 +118,8 @@ const Nav = () => {
           src="/hamburger.jpg"
           onClick={() => setShow(true)}
           alt="Hamburger"
+          width="30"
+          height="30"
         />
       </div>
     </nav>
