@@ -4,22 +4,20 @@ import { useState } from 'react';
 import { products } from '@/data/data';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import useGetquery from '@/data/server/useGetquery';
 
 type NavLinksType = {
   url: string;
   name: string;
 } & React.ComponentProps<'a'>;
 
-const NavLinks = ({ url, name, ...rest }: NavLinksType) => {
-  return (
-    <Link href={url} {...rest}>
-      {name}
-    </Link>
-  );
-};
-
 const Nav = () => {
   const [show, setShow] = useState(false);
+
+  const path = usePathname();
+
+  const settings = useGetquery('settings', '/settings') || [];
 
   return (
     <nav>
@@ -27,7 +25,7 @@ const Nav = () => {
         <div>
           <div>
             <Image
-              src="/logo.jpeg"
+              src={settings[0]?.comp_logo}
               width="100"
               height="50"
               alt=""
@@ -38,42 +36,58 @@ const Nav = () => {
           <div>
             <ul>
               <li>
-                <NavLinks url="/" name="Home" onClick={() => setShow(false)} />
+                <Link
+                  href="/"
+                  className={path === '/' ? 'active' : ''}
+                  onClick={() => setShow(false)}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <NavLinks
-                  url="/whoweare"
-                  name="Who we are"
+                <Link
+                  href="/whoweare"
+                  className={path === '/whoweare' ? 'active' : ''}
                   onClick={() => setShow(false)}
-                />
+                >
+                  Who we are
+                </Link>
               </li>
               <li>
-                <NavLinks
-                  url="/ourproducts"
-                  name="Our products"
+                <Link
+                  href="/ourproducts"
+                  className={path === '/ourproducts' ? 'active' : ''}
                   onClick={() => setShow(false)}
-                />
+                >
+                  Our products
+                </Link>
               </li>
               <li>
-                <NavLinks
-                  url="/whereweare"
-                  name="Where we are"
+                <Link
+                  href="/whereweare"
+                  className={path === '/whereweare' ? 'active' : ''}
                   onClick={() => setShow(false)}
-                />
+                >
+                  Where we are
+                </Link>
               </li>
               <li>
-                <NavLinks
-                  url="/whatwedo"
-                  name="What we do"
+                <Link
+                  href="/whatwedo"
+                  className={path === '/whatwedo' ? 'active' : ''}
                   onClick={() => setShow(false)}
-                />
+                >
+                  What we do
+                </Link>
               </li>
               <li>
-                <NavLinks
-                  url="/contact"
-                  name="Contact"
+                <Link
+                  href="/contact"
+                  className={path === '/contact' ? 'active' : ''}
                   onClick={() => setShow(false)}
-                />
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
 

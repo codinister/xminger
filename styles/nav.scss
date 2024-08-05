@@ -31,7 +31,7 @@
             height: 6rem;
             border-radius: 1rem;
             animation: text-zoom 1s 8s linear forwards;
-          
+
             box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
           }
         }
@@ -44,13 +44,13 @@
           }
         }
 
-         .active {
+        .active {
           background-color: var(--danger);
           padding-inline: 1.6rem;
           padding-block: 1.2rem;
           border-radius: 1.8rem;
           color: white;
-        } 
+        }
 
         display: flex;
         justify-content: center;
@@ -60,10 +60,15 @@
 
           li {
             width: max-content;
+            .active {
+              background-color: var(--danger);
+              color: white;
+              padding-block: 1.2rem;
+              border-radius: 1.8rem;
+            }
             a {
               color: var(--black);
               animation: text-zoom 1s 8s linear forwards;
-              
               padding-inline: 1.6rem;
               font-size: 1.6rem;
               &:hover {

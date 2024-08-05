@@ -1,12 +1,13 @@
+'use client';
+
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+
 import './globals.scss';
 import Footer from '@/components/footer/Footer';
 import Nav from '@/components/nav/Nav';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Xminger Advertising',
   description: 'Outdoor Advertising company in Ghana',
 };
@@ -16,12 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const provider = new QueryClient();
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        {children}
-        <Footer />
+      <body>
+        <QueryClientProvider client={provider}>
+          <Nav />
+          {children}
+          <Footer />
+        </QueryClientProvider>
       </body>
     </html>
   );

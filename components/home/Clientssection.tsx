@@ -1,9 +1,12 @@
 'use client'
 
-
-import { clients } from '@/data/data';
+import useGetquery from '@/data/server/useGetquery';
 
 const Clientssection = () => {
+
+  const clients = useGetquery('client', '/client') || []
+
+
   return (
     <div className="clientssection">
       <div className="container">
@@ -17,7 +20,7 @@ const Clientssection = () => {
         <div>
           <div
             style={{
-              backgroundImage: `url(${clients[0]?.img})`,
+              backgroundImage: `url(${clients[0]?.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

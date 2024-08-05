@@ -1,0 +1,6 @@
+// const pages = useGetquery('pages', '/pages') || []
+// const post = useGetquery('post', '/post') || []
+// const products = useGetquery('products', '/products')  || []
+// const settings = useGetquery('settings', '/settings') || []
+// const team = useGetquery('team', '/team') || []
+// const client = useGetquery('client', '/client') || []

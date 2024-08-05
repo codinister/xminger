@@ -5,6 +5,7 @@ export default defineType({
   title: 'Team',
   type: 'document',
   fields: [
+
     defineField({
       name: 'fullname',
       title: 'Fullname',
@@ -52,6 +53,11 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'id',
+      title: 'ID',
+      type: 'string',
     }),
   ],
 });

@@ -6,5 +6,6 @@ import pages from './pages'
 import settings from './settings'
 import products from './products'
 import team from './team'
+import client from './client'
 
-export const schemaTypes = [post,pages, author, category, blockContent,settings,products,team]
+export const schemaTypes = [post,pages, author, category, blockContent,settings,products,team,client]

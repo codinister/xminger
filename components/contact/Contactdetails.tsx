@@ -2,17 +2,23 @@
 
 
 
+import useGetquery from "@/data/server/useGetquery"
 import Contactbox from "./Contactbox"
 
 const Contactdetails = () => {
+
+  const set = useGetquery('settings', '/settings') || []
+
+
+
   return (
     <div className="contactdetails">
     <div>
       <Contactbox desc="Danyame-Kumasi" url="#" fa="map-marker" />
-      <Contactbox desc="+233 (0) 322 023 430" url="#" fa="phone" />
-      <Contactbox desc="+233 (0) 501 685 788" url="#" fa="phone" />
+      <Contactbox desc={set[0]?.phone1} url="#" fa="phone" />
+      <Contactbox desc={set[0]?.phone2} url="#" fa="phone" />
       <Contactbox
-        desc="info@xmingeradvertising.com"
+        desc={set[0]?.email}
         url="#"
         fa="envelope"
       />

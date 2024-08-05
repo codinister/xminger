@@ -1,9 +1,12 @@
 'use client';
 
-import { whatwedo } from '@/data/data';
 import Readmore from '../Readmore';
+import useGetquery from '@/data/server/useGetquery';
 
 const Whatwedosection = () => {
+  const data = useGetquery('pages', '/pages') || [];
+  const what = data?.filter((v: any) => v.slug === 'what-we-do');
+
   return (
     <div className="whatwedosection">
       <div>
@@ -31,9 +34,10 @@ const Whatwedosection = () => {
         </div>
       </div>
       <div>
-        <h2>{whatwedo[0]?.title}</h2>
+        <h2>{what[0]?.title}</h2>
 
-        <div>{whatwedo[0]?.excerpt}</div>
+        <div>{what[0]?.excerpt}</div>
+        <div className="mt-24"></div>
 
         <Readmore>Read more</Readmore>
       </div>

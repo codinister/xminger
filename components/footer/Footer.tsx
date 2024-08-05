@@ -1,20 +1,22 @@
 'use client';
 
-import { products } from '@/data/data';
 import Contactdetails from '../contact/Contactdetails';
+import useGetquery from '@/data/server/useGetquery';
 
 const Footer = () => {
+  const products = useGetquery('products', '/products') || [];
+
   return (
     <footer>
       <div className="container">
         <div>
           <div className="footer-products">
-            {Object.values(products).map((v, k) => {
+            {products?.map((v: any, k: number) => {
               return (
                 <div
                   key={k}
                   style={{
-                    backgroundImage: `url(${v.img})`,
+                    backgroundImage: `url(${v.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}

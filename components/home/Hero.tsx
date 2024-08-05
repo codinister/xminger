@@ -1,37 +1,41 @@
-'use client'
+'use client';
 
-import Nav from '../nav/Nav';
-import { products } from '@/data/data';
+import useGetquery from '@/data/server/useGetquery';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Hero = () => {
   const [getImg, setImg] = useState('');
 
-  const ourproducts = Object.values(products).map((v, k) => {
+  const products = useGetquery('products', '/products') || [];
+
+  const ourproducts = products.map((v: any, k: number) => {
+    const title = v.title.toUpperCase().split('X');
+    const size1 = title[0];
+    const size2 = Number.parseInt(title[1]);
+
     return (
       <div
         key={k}
-        className={`bx${v.id}`}
-        onClick={() => setImg(v.img)}
+        className={`bx${k}`}
+        onClick={() => setImg(v.image)}
         style={{
-          backgroundImage: `url(${v.img})`,
+          backgroundImage: `url(${v.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <h5>{v.size}</h5>
+        <h5>{size1 + ' X' + size2}</h5>
       </div>
     );
   });
 
   return (
     <div className="hero">
-
-
       <div
         className="header-image"
         style={{
-          backgroundImage: `url(${products[0]?.img})`,
+          backgroundImage: `url(${products[0]?.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -44,7 +48,7 @@ const Hero = () => {
       <div
         className="slider"
         style={{
-          backgroundImage: `url(${getImg || products[1]?.img})`,
+          backgroundImage: `url(${getImg || products[1]?.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

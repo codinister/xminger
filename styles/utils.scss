@@ -1,15 +1,14 @@
-
-
-.adminpage{
-    margin-top: 9rem;
+.adminpage {
+  margin-top: 9rem;
 }
-
 
 @media (min-width: 35em) {
+  .mt-24 {
+    margin-top: 2.4rem;
+  }
 
-.container{
+  .container {
     padding-inline: 7rem;
     margin-inline: auto;
-}
-
+  }
 }

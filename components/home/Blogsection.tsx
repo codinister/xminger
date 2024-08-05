@@ -1,32 +1,45 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
-import { blog } from '@/data/data';
+
 import Readmore from '../Readmore';
+import useGetquery from '@/data/server/useGetquery';
 
 
 const Blogsection = ({ showbtn }: { showbtn?: Boolean }) => {
-  const arr = blog.slice(0, 4);
+
+
+
+  const post = useGetquery('post', '/post') || []
+  
+  const arr = post?.slice(0, 4);
+
+
+  console.log(arr)
+
+
+
 
   const router = useRouter()
 
-  const getFirst = arr.splice(0, 1);
-  const getRest = arr.map((v, k) => {
+
+  const getFirst = arr?.splice(0, 1);
+  const getRest = arr?.map((v: any, k: number) => {
 
     return (
       <div className="post-card" key={k}>
         <div
           style={{
-            backgroundImage: `url(${v.img})`,
+            backgroundImage: `url(${v.image})`,
             backgroundSize: 'size',
             backgroundPosition: 'center',
           }}
         ></div>
         <div>
-          <div>Published on: {v.date}</div>
-          <h6 title={v.title}>{v.title.slice(0, 20)}...</h6>
-          <div>{v.excerpt.slice(0, 60)}...</div>
-          <Readmore  onClick={() => handleClick(v.id)}>Read more</Readmore>
+          <div>Published on: {v._createdAt}</div>
+          <h6 title={v.title}>{v.title?.slice(0, 20)}...</h6>
+          <div>{v.excerpt?.slice(0, 60)}...</div>
+          <Readmore  onClick={() => handleClick(v._id)}>Read more</Readmore>
         </div>
       </div>
     );
@@ -43,7 +56,7 @@ const Blogsection = ({ showbtn }: { showbtn?: Boolean }) => {
           <div>
             <div
               style={{
-                backgroundImage: `url(${getFirst[0]?.img})`,
+                backgroundImage: `url(${getFirst[0]?.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}

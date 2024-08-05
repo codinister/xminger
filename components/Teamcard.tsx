@@ -1,6 +1,6 @@
 type Teamdata = {
   data: {
-    img: string;
+    image: string;
     fullname: string;
     role: string;
     facebook: string;
@@ -11,13 +11,13 @@ type Teamdata = {
 };
 
 const Teamcard = ({ data }: Teamdata) => {
-  const { img, fullname, role, facebook, twitter, instagram, linkedin } = data;
-  console.log(data);
+  const { image, fullname, role, facebook, twitter, instagram, linkedin } = data;
+
   return (
     <div className="team-card">
       <div
         style={{
-          backgroundImage: `url(${img})`,
+          backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
