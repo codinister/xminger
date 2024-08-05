@@ -1,13 +1,17 @@
 'use client';
 
-import { products } from '@/data/data';
+import useGetquery from "@/data/server/useGetquery";
+
+
 
 const Pageheader = ({ title }: { title: string }) => {
+
+  const products = useGetquery('products', '/products')  || []
   
-  const img1 = products[0]?.img;
-  const img2 = products[1]?.img;
-  const img3 = products[2]?.img;
-  const img4 = products[3]?.img;
+  const img1 = products[0]?.image;
+  const img2 = products[1]?.image;
+  const img3 = products[2]?.image;
+  const img4 = products[3]?.image;
 
   return (
     <div className="pageheader">

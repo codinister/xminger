@@ -15,7 +15,7 @@ const Whowearesection = () => {
           <h2>{who[0]?.title}</h2>
           <div>{who[0]?.excerpt}</div>
           <div className="mt-24"></div>
-          <Readmore>Read more</Readmore>
+          <Readmore url="/whoweare">Read more</Readmore>
         </div>
       </div>
       <div>

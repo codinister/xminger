@@ -1,31 +1,17 @@
-'use client'
+'use client';
 
-import { useRouter } from 'next/navigation';
 
 import Readmore from '../Readmore';
 import useGetquery from '@/data/server/useGetquery';
 
-
 const Blogsection = ({ showbtn }: { showbtn?: Boolean }) => {
+  const post = useGetquery('post', '/post') || [];
 
-
-
-  const post = useGetquery('post', '/post') || []
-  
   const arr = post?.slice(0, 4);
-
-
-  console.log(arr)
-
-
-
-
-  const router = useRouter()
 
 
   const getFirst = arr?.splice(0, 1);
   const getRest = arr?.map((v: any, k: number) => {
-
     return (
       <div className="post-card" key={k}>
         <div
@@ -39,15 +25,11 @@ const Blogsection = ({ showbtn }: { showbtn?: Boolean }) => {
           <div>Published on: {v._createdAt}</div>
           <h6 title={v.title}>{v.title?.slice(0, 20)}...</h6>
           <div>{v.excerpt?.slice(0, 60)}...</div>
-          <Readmore  onClick={() => handleClick(v._id)}>Read more</Readmore>
+          <Readmore url={`/singlepage/${v._id}`}>Read more</Readmore>
         </div>
       </div>
     );
   });
-
-  const handleClick = (val: string) => {
-    router.push(`/singlepage/${val}`)
-  };
 
   return (
     <div className="blogsection">
@@ -67,7 +49,7 @@ const Blogsection = ({ showbtn }: { showbtn?: Boolean }) => {
               </h6>
               <div>{getFirst[0]?.excerpt.slice(0, 120)}...</div>
 
-              <Readmore onClick={() => handleClick(getFirst[0]?.id)}>
+              <Readmore url={`/singlepage/${getFirst[0]?.id}`}>
                 Read more
               </Readmore>
             </div>

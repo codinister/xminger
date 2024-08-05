@@ -7,6 +7,10 @@ const Whatwedosection = () => {
   const data = useGetquery('pages', '/pages') || [];
   const what = data?.filter((v: any) => v.slug === 'what-we-do');
 
+
+
+
+
   return (
     <div className="whatwedosection">
       <div>
@@ -39,7 +43,7 @@ const Whatwedosection = () => {
         <div>{what[0]?.excerpt}</div>
         <div className="mt-24"></div>
 
-        <Readmore>Read more</Readmore>
+        <Readmore url="/whatwedo">Read more</Readmore>
       </div>
     </div>
   );

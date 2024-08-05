@@ -27,17 +27,17 @@ const Contactdetails = () => {
     <div>
       <Contactbox
         desc="Facebook"
-        url="https://web.facebook.com/xmingeradvertising"
+        url={set[0]?.facebook}
         fa="facebook"
       />
       <Contactbox
         desc="Instagram"
-        url="https://www.instagram.com/xminger_advertising.gh/"
+        url={set[0]?.instagram}
         fa="instagram"
       />
       <Contactbox
         desc="Youtube"
-        url="https://www.youtube.com/@xmingeradvertising7690"
+        url={set[0]?.youtube}
         fa="youtube"
       />
     </div>

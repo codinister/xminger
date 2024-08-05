@@ -11,6 +11,13 @@ export async function GET(req: NextResponse) {
       groq`
       *[_type == 'post' && title != null]{
       ..., 
+      "body": body[]{
+      ..., 
+      asset->{
+        ...,
+        "_key": _id
+      }
+    },
       'image': mainImage.asset->url,
       "slug": slug.current,
       "excerpt": array::join(string::split((pt::text(body)), "")[0..500], "") + "...",

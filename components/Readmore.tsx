@@ -1,13 +1,22 @@
+'use client';
 
-'use client'
+import { useRouter } from 'next/navigation';
+
 type READMORE = {
-  children: string
-} & Omit<React.ComponentProps<"button">, "children">
+  url: string;
+  children: string;
+} & Omit<React.ComponentProps<'button'>, 'children'>;
 
-const Readmore = ({children, ...rest}: READMORE) => {
+const Readmore = ({ children, url, ...rest }: READMORE) => {
+  const router = useRouter();
+
+  const handleClick = () => router.push(url);
+
   return (
-    <button className="readmore" {...rest}>{children}</button>
-  )
-}
+    <button className="readmore" onClick={handleClick} {...rest}>
+      {children}
+    </button>
+  );
+};
 
-export default Readmore
+export default Readmore;

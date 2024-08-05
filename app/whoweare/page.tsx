@@ -2,13 +2,21 @@
 
 
 
+import Bodycontent from '@/components/Bodycontent';
 import Pageheader from '@/components/Pageheader';
 import { products, whoweare } from '@/data/data';
+import useGetquery from '@/data/server/useGetquery';
 
 const Whoweare = () => {
-  const img1 = products[2]?.img;
-  const img2 = products[3]?.img;
-  const img3 = products[4]?.img;
+
+  const products = useGetquery('products', '/products')  || []
+  const pages = useGetquery('pages', '/pages') || []
+
+  const whoweare = pages?.filter((v: any)=> v.slug === 'who-we-are')
+
+  const img1 = products[2]?.image;
+  const img2 = products[3]?.image;
+  const img3 = products[4]?.image;
 
   return (
     <>
@@ -17,7 +25,8 @@ const Whoweare = () => {
       <section className="whoweare">
         <div className="container">
           <div>
-            <div>{whoweare[0]?.body}</div>
+       
+            <Bodycontent body={whoweare[0]?.body} />
           </div>
           <div>
             <div

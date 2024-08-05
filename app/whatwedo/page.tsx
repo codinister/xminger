@@ -3,12 +3,21 @@
 
 
 
+import Bodycontent from '@/components/Bodycontent';
 import Pageheader from '@/components/Pageheader';
-import { products } from '@/data/data';
+import useGetquery from '@/data/server/useGetquery';
+
 
 const Whatwedo = () => {
-  const img1 = products[2]?.img
-  const img2 = products[4]?.img
+
+  const pages = useGetquery('pages', '/pages') || []
+  const products = useGetquery('products', '/products')  || []
+
+  const whatwedo = pages?.filter((v: any)=> v.slug === 'what-we-do')
+
+
+  const img1 = products[2]?.image
+  const img2 = products[4]?.image
   return (
     <>
       <Pageheader title="What we do" />
@@ -38,16 +47,7 @@ const Whatwedo = () => {
 
         <div>
 
-          <div>
-          Xminger has billboards situated at prime locations across the country.
-          They come in various sizes and are designed to capture and captivate
-          the viewer. We have selected the best locations in various towns in
-          the region to ensure maximum exposure and brand building. Our
-          advertising spaces are rented to clients who will display their
-          visuals for a standard 12-month period or part of. Space rental
-          renewals must be confirmed at least 30 days before the expiration
-          dates.
-          </div>
+        <Bodycontent body={whatwedo[0]?.body} />
         </div>
         <div>
 

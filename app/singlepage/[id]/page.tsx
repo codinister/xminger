@@ -1,17 +1,19 @@
-'use client'
-
+'use client';
 
 import Sidebarpostcardlg from '@/components/blog/Sidebarpostcardlg';
 import Sidebarpostcardsm from '@/components/blog/Sidebarpostcardsm';
-import { blog } from '@/data/data';
+import Bodycontent from '@/components/Bodycontent';
+import useGetquery from '@/data/server/useGetquery';
+import Blockcontent from '@sanity/block-content-to-react';
 
+const Singlepage = ({ params }: { params: { id: string } }) => {
+  const { id } = params;
 
-const Singlepage = ({ params }: { params: { id: string } })=> {
-  const { id } = params
+  const blog = useGetquery('post', '/post') || [];
 
-  const obj = blog.find((v) => v.id === id);
+  const obj = blog?.find((v: any) => v._id === id);
 
-  const arrs = blog.filter((v) => v.id !== id).slice(0, 6);
+  const arrs = blog?.filter((v: any) => v._id !== id).slice(0, 6);
 
   const first = arrs.splice(0, 1);
   const remaining = arrs;
@@ -22,14 +24,14 @@ const Singlepage = ({ params }: { params: { id: string } })=> {
         <div>
           <div
             style={{
-              backgroundImage: `url(${obj?.img})`,
+              backgroundImage: `url(${obj?.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           ></div>
           <h2>{obj?.title}</h2>
 
-          <div>{obj?.body}</div>
+          <Bodycontent body={obj?.body} />
         </div>
         <div>
           <Sidebarpostcardlg data={first} />
