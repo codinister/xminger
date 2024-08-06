@@ -27,6 +27,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </QueryClientProvider>
+
+        <div id="modal"></div>
       </body>
     </html>
   );

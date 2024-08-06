@@ -1,14 +1,17 @@
 'use client'
 
 
-const Productbox = ({ img, title }: { title: string; img: string }) => {
+const Productbox = ({ img, title, fn }: { title: string; img: string; fn: Function }) => {
+
   return (
     <div
       className="prod-box"
+      onClick={()=> fn(img,title)}
       style={{
         backgroundImage: `url(${img})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        cursor: 'pointer'
       }}
     >
       <div>
@@ -16,6 +19,7 @@ const Productbox = ({ img, title }: { title: string; img: string }) => {
       </div>
     </div>
   );
+
 };
 
 export default Productbox;
