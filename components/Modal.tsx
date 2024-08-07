@@ -26,14 +26,14 @@ const Modal = ({
     </div>
   );
 
-  if (document.getElementById('modal')) {
+  if (typeof window === "object") {
+
     return createPortal(
       content,
-      document.getElementById('modal') as HTMLElement
+      document?.getElementById('modal') as HTMLElement
     );
-  } else {
-    return <></>;
   }
+return null
 
 
 };

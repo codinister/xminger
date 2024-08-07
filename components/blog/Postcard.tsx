@@ -1,7 +1,5 @@
+'use client';
 
-'use client'
-
-import { useRouter } from 'next/navigation';
 import Readmore from '../Readmore';
 
 type PostcardType = {
@@ -14,10 +12,7 @@ type PostcardType = {
 };
 
 const Postcard = ({ id, img, date, title, excerpt, url }: PostcardType) => {
-  const router = useRouter();
-  const handleClick = (val: string) => {
-    router.push(`/singlepage/${val}`);
-  };
+  const urls = `/singlepage/${id}`;
 
   return (
     <div className="postcard">
@@ -32,7 +27,7 @@ const Postcard = ({ id, img, date, title, excerpt, url }: PostcardType) => {
         <div>Published on: {date}</div>
         <h4 title={title}>{title.slice(0, 20)}...</h4>
         <div>{excerpt.slice(0, 110)}...</div>
-        <Readmore onClick={() => handleClick(id)}>Read more</Readmore>
+        <Readmore url={urls}>Read more</Readmore>
       </div>
     </div>
   );

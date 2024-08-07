@@ -100,7 +100,7 @@ const ContactForm = () => {
           {isPending ? (
             <BeatLoader />
           ) : (
-            <Readmore disabled={isPending} name="Read more">
+            <Readmore disabled={isPending} name="Read more" url="#">
               Send
             </Readmore>
           )}
