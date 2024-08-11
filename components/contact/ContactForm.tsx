@@ -1,17 +1,14 @@
-'use client'
-
-
+'use client';
 
 import { useState } from 'react';
-import Readmore from '../Readmore';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { emailSchema } from './zodSchema';
 import Errors from './Errors';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTransition } from 'react';
-import sendMail from './sendMail';
 import { BeatLoader } from 'react-spinners';
+import axiosInterceptor from '@/data/server/axiosInterceptor';
 
 const ContactForm = () => {
   type Errtype = any;
@@ -35,28 +32,32 @@ const ContactForm = () => {
     },
   });
 
-  const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useState(false);
 
   const formSubmit = async (val: z.infer<typeof emailSchema>) => {
-    startTransition(() => {
-      sendMail(val)
-        .then((data) => {
-          const success = data?.success;
-          const errors = data?.error;
+    try {
+      startTransition(true)
+      const { data } = await axiosInterceptor({
+        url: '/email',
+        method: 'Post',
+        data: val,
+      });
 
-          setSuccess(success);
-          setErr(errors);
-        })
-        .catch((err) => console.log(err));
-    });
+      if (data?.success) {
+        setSuccess(data?.success);
+      } else {
+        setErr(data?.errors);
+      }
+      startTransition(false)
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   if (success) {
     return (
       <div className="successbox">
-        <div>
-          <button onClick={closeBox} title="Close">X</button>
-        </div>
+
         <div>Email sent!</div>
       </div>
     );
@@ -100,9 +101,7 @@ const ContactForm = () => {
           {isPending ? (
             <BeatLoader />
           ) : (
-            <Readmore disabled={isPending} name="Read more" url="#">
-              Send
-            </Readmore>
+            <button className="contactbtn">SEND MESSAGE</button>
           )}
         </div>
       </form>

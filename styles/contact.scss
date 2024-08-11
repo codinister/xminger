@@ -1,35 +1,81 @@
 .contact {
   padding-block: 4.8rem;
+
+
+
   & > div {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 3.2rem;
     & > div {
       flex: 10rem 1 1;
+      background-color: #292c33;
+      gap: 4rem;
+      height: 40rem;
+      padding: 1.6rem;
+      border-radius: 1.6rem;
     }
-    & > div:nth-of-type(1) {
-      & > div:nth-of-type(1) {
-        padding: 2.4rem;
+  }
+
+  .contactformwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .contactdetails {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    & > div {
+      flex: 20rem 1 1;
+      text-align: center;
+      height: 17rem;
+      padding-block: 1.6rem;
+
+      .socialbox {
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+        margin-top: 1.6rem;
+        .fa {
+          width: 3rem;
+          height: 3rem;
+          font-size: 1.2rem;
+        }
       }
-      & > div:nth-of-type(2) {
-  
+
+      h4 {
+        font-size: 2.4rem;
+        color: #ccc;
       }
-    }
-    & > div:nth-of-type(2) {
-      background-color: #f6eee1;
-      height: 47rem;
-      padding: 2.4rem;
+      h6 {
+        color: white;
+        font-size: 1.2rem;
+      }
+      .fa {
+        margin-bottom: 1.6rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: solid 0.1rem #ccc;
+        color: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4rem;
+        margin-inline: auto;
+      }
     }
   }
 }
 
 .contactform {
-  width: 70%;
-
-  margin-inline: auto;
+  width: 100%;
 
   button {
     width: 100%;
@@ -37,16 +83,19 @@
   h4 {
     margin-bottom: 2.4rem;
     text-align: center;
-    color: var(--danger);
+    color: white;
   }
   .input-control {
     position: relative;
 
     input {
+
       width: 100%;
       padding: 0.8rem;
-      border: solid 0.1rem #444;
+      border: solid 0.1rem #fff;
       outline: none;
+      color: white;
+      background-color: transparent;
     }
 
     input:focus + label {
@@ -66,19 +115,28 @@
       position: absolute;
       top: 0.4rem;
       left: 0.8rem;
+      color: white;
     }
   }
 
+  .contactbtn {
+    padding: 1.2rem;
+    outline: none;
+    cursor: pointer;
+  }
+
   textarea {
-    border: solid 0.1rem #444;
+    border: solid 0.1rem #fff;
     width: 100%;
     padding: 0.8rem;
-
+    background-color: transparent;
     outline: none;
+    height: 10rem;
+    color: white;
   }
 
   .errors {
-    color: red;
+    color: #fa6f3f;
     display: block;
     margin-bottom: 1.6rem;
   }
@@ -90,29 +148,7 @@
 }
 
 .successbox {
-  width: 40rem;
-  height: 15rem;
-  box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.2);
-  margin-inline: auto;
-  & > div:nth-of-type(1) {
-    text-align: right;
-    padding: 1.6rem;
-    button {
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-  }
-
-  & > div:nth-of-type(2) {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: green;
-    font-size: 2.4rem;
-  }
+color: white;
 }
 
 .contactdetails {
