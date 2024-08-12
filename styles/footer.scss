@@ -99,8 +99,6 @@
               gap: 1.6rem;
               align-items: center;
               margin-bottom: 1.6rem;
-
-     
             }
           }
         }
@@ -112,22 +110,17 @@
 @media (max-width: 35em) {
   footer {
     background-color: var(--black);
+    
+    
     padding: 2.4rem;
-
-    overflow: hidden;
+    position: relative;
 
     & > div:nth-of-type(2) {
       color: #999;
-      text-align: center;
+      text-align: left;
     }
 
     & > div:nth-of-type(1) {
-      display: flex;
-      gap: 3.2rem;
-      & > div {
-        flex: 10rem 1 1;
-      }
-
       & > div:nth-of-type(1) {
         display: none;
       }
@@ -135,16 +128,24 @@
       & > div:nth-of-type(2) {
         h4 {
           letter-spacing: 1rem;
-          text-align: center;
+          text-align: left;
           margin-bottom: 3.2rem;
-          padding-block: 1.6rem;
+          padding-bottom: 1.6rem;
           border-bottom: 0.1rem solid #999;
         }
 
         & > div {
+          display: flex;
+          gap: 3.2rem;
+          flex-direction: column;
           & > div {
             flex: 10rem 1 1;
-      
+            .cont-box {
+              display: flex;
+              gap: 1.6rem;
+              align-items: center;
+              margin-bottom: 1.6rem;
+            }
           }
         }
       }

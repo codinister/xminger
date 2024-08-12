@@ -115,7 +115,7 @@ const Nav = () => {
               ></div>
               <div>
                 <h4>Our products</h4>
-                <Image src={products[0]?.img} alt="" width="30" height="30" />
+                <Image src={products[0]?.img} alt="" width="150" height="100" />
               </div>
             </div>
           </div>
